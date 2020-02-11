@@ -1,5 +1,7 @@
 <script>
   import About from "./About.svelte";
+  import AddingNumbers from "./AddingNumbers.svelte";
+  import Logic from "./Logic.svelte";
   export let name;
 
   let count = 0;
@@ -65,6 +67,15 @@
   <About about={line2} />
   <About about={line3} />
 
+  <div>--------------------</div>
+
+  <div>Reactivity: variables</div>
   <button on:click={handleClick}>Clicked {count} doubled is {doubled}</button>
+  <AddingNumbers startingNumber={5} />
+
+  <div>--------------------</div>
+
+  <div>Logic</div>
+  <Logic />
 
 </main>
