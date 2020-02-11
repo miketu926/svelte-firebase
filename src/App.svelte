@@ -2,6 +2,29 @@
   import About from "./About.svelte";
   export let name;
 
+  let count = 0;
+
+  // to have a 'reactive' declaration, use $: as a prefix to declare variables;
+
+  $: doubled = count * 2;
+
+  // reactive block notation:
+  $: {
+    console.log(`doubled is: ${doubled}`);
+    console.log(`will this console run as well?`);
+    console.log("fact: everything in a reactive block will render");
+  }
+
+  // reactive JS notation
+  $: if (count > 3) {
+    console.log(`count is now greater than 3 by this JS notation`);
+  }
+
+  // handler function passes through on:click prop
+  const handleClick = () => {
+    count++;
+  };
+
   let line1 = "This about prop is being rendered in the About component";
   let line2 =
     "Another About component with a differnet prop state. Should use export to expect a prop within the component";
@@ -41,4 +64,7 @@
   <About about={line1} />
   <About about={line2} />
   <About about={line3} />
+
+  <button on:click={handleClick}>Clicked {count} doubled is {doubled}</button>
+
 </main>

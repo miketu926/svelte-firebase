@@ -1,5 +1,7 @@
 import App from './App.svelte';
 
+// the new keyword turns each component into a regular JS class at compile time
+
 const app = new App({
 	target: document.body,
 	props: {
