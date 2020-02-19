@@ -1,7 +1,5 @@
-[Live Site](https://svelte-firebase-2222.firebaseapp.com)
----
-
 # svelte app
+[Live Site](https://svelte-firebase-2222.firebaseapp.com)
 
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
